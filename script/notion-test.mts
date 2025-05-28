@@ -8,12 +8,9 @@ import { writeFileSync } from 'fs';
 
 dotenv.config();
 
-/*
-export NOTION_TOKEN="secret_fBfi7m3Mywg2YvU4wL1pAhtWa1NvBzghfSReTQVtyOO"
-export NOTION_DB_ID="200dcf1514f881c5ba42cf0e368c1df6"
-*/
+ 
 
-const NOTION_TOKEN = "secret_fBfi7m3Mywg2YvU4wL1pAhtWa1NvBzghfSReTQVtyOO"; // s" process.env.NOTION_TOKEN;
+const NOTION_TOKEN = process.env.NOTION_TOKEN;
 const DATABASE_ID = "200dcf1514f881c5ba42cf0e368c1df6";// process.env.NOTION_DB_ID;
 
 if (!NOTION_TOKEN || !DATABASE_ID) {
