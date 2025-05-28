@@ -15,7 +15,7 @@ export default function ShortUrlRedirect({ params }: Params) {
   const { slug } = params
   const destination = links[slug]
 
-  if (!destination) {
+      if (!destination) {
     // If slug not found, show 404 page
     return <h1>404 - Link not found</h1>
   }
