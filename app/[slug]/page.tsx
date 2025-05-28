@@ -1,21 +1,20 @@
 // app/[slug]/page.tsx
 import { redirect } from 'next/navigation'
-
 import rawLinks from '../../links.json'
+
 const links: { [key: string]: string } = rawLinks
 
-
-interface Params {
+interface PageProps {
   params: {
-         slug: string
+    slug: string
   }
 }
 
-export default function ShortUrlRedirect({ params }: Params) {
+export default async function ShortUrlRedirect({ params }: PageProps) {
   const { slug } = params
   const destination = links[slug]
 
-      if (!destination) {
+  if (!destination) {
     // If slug not found, show 404 page
     return <h1>404 - Link not found</h1>
   }
