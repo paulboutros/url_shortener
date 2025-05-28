@@ -1,4 +1,20 @@
-// app/[slug]/page.tsx
+
+
+import { redirect } from 'next/navigation'
+
+export default function Page({ params }: { params: { slug: string } }) {
+  const slug = params.slug
+
+  // Simple redirect to example.com or 404 fallback
+  if (slug === 'test') {
+    redirect('https://example.com')
+  } else {
+    return <h1>404 - Link not found</h1>
+  }
+}
+
+
+/*
 import { redirect } from 'next/navigation'
 import rawLinks from '../../links.json'
 
@@ -22,3 +38,4 @@ export default async function ShortUrlRedirect({ params }: PageProps) {
   // Redirect immediately to the destination URL
   redirect(destination)
 }
+*/
