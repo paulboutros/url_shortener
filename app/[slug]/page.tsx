@@ -7,7 +7,7 @@ const links: { [key: string]: string } = rawLinks
 
 interface Params {
   params: {
-     slug: string
+      slug: string
   }
 }
 
