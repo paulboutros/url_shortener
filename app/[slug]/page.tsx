@@ -4,7 +4,7 @@ import rawLinks from '../../links.json'
 
 const links: { [key: string]: string } = rawLinks
 
-interface PageProps {
+ interface PageProps {
   params: {
     slug: string
   }
